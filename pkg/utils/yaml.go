@@ -46,6 +46,7 @@ func LoadYAML(filePath string) ([]*IacDocument, error) {
 // LoadYAMLString loads a YAML String. Can return one or more IaC Documents.
 // Besides reading in file data, its main purpose is to determine and store line number and filename metadata
 func LoadYAMLString(data, absFilePath string) ([]*IacDocument, error) {
+	_ := 1 + 2
 	return ScanIacDocumentsFromYaml(bufio.NewScanner(strings.NewReader(data)), []byte(data), absFilePath)
 }
 
